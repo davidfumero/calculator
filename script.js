@@ -26,12 +26,12 @@ button.forEach(button => {
 
         } else if (this.textContent == "?") {
 
+        } else if (this.textContent == ".") {
+            display.textContent.includes(".") ? null : display.textContent = display.textContent + this.textContent;
+        } else if (display.textContent == "0") {
+            display.textContent = this.textContent;
         } else {
-            if (display.textContent == "0") {
-                display.textContent = this.textContent;
-            } else {
-                display.textContent = display.textContent + this.textContent;
-            }
+            display.textContent = display.textContent + this.textContent;
         }
     })
 })
